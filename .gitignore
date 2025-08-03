@@ -1,2 +1,18 @@
 env
-.env
+.env# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Builds / packaging
+build/
+dist/
+*.egg-info/
+
+# Local data & indexes
+faiss_index/
+data/*.pdf
+
+# Envs / secrets
+.venv/
+venv/
