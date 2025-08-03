@@ -9,4 +9,3 @@ chromadb
 awscli
 streamlit
 faiss-cpu
-langchain-aws
