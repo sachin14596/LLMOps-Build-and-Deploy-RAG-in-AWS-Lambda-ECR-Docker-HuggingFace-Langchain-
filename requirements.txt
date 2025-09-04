@@ -11,4 +11,3 @@ streamlit
 faiss-cpu
 langchain-aws
 pypdf
--e .
