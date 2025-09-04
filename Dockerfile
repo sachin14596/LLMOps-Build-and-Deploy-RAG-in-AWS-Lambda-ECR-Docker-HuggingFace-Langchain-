@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster
+FROM python:3.13-slim-bookworm
 
 # Good defaults
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -18,8 +18,7 @@ RUN apt-get update \
 # Copy dependency files first (better build caching)
 COPY requirements.txt constraints.txt ./
 
-# Upgrade pip and install Python deps using constraints
-# This avoids slow resolver backtracking during Docker builds
+# Upgrade pip and install Python deps using constraints (faster, deterministic)
 RUN python -m pip install --upgrade pip \
  && pip install --no-cache-dir -r requirements.txt -c constraints.txt
 
