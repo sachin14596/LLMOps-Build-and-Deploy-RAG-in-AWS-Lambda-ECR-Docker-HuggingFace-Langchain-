@@ -6,7 +6,6 @@ openai
 boto3
 langchain_community
 chromadb
-awscli
 streamlit
 faiss-cpu
 langchain-aws
