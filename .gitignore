@@ -1,5 +1,12 @@
+# Envs / secrets
+.env
 env
-.env# Python
+.env.*
+*.env
+.venv/
+venv/
+
+# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -12,7 +19,3 @@ dist/
 # Local data & indexes
 faiss_index/
 data/*.pdf
-
-# Envs / secrets
-.venv/
-venv/
