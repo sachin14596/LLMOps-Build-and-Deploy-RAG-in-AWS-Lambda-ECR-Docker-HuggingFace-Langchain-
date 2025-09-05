@@ -11,7 +11,7 @@ from QASystem.ingestion import data_ingestion, get_vector_store
 from QASystem.retrievalandgeneration import get_claude_llm, get_response_llm
 
 # Bedrock client (EU North 1)
-bedrock = boto3.client(service_name="bedrock-runtime", region_name="eu-north-1")
+bedrock = boto3.client(service_name="bedrock-runtime", region_name="eu-west-2")
 
 # Amazon Titan Text Embeddings V2
 bedrock_embeddings = BedrockEmbeddings(

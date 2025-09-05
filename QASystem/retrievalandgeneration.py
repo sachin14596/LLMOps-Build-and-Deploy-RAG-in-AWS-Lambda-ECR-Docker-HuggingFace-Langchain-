@@ -8,7 +8,7 @@ import boto3
 from QASystem.ingestion import get_vector_store, data_ingestion
 
 # Bedrock client (EU North 1) — for embeddings
-bedrock = boto3.client(service_name="bedrock-runtime", region_name="eu-north-1")
+bedrock = boto3.client(service_name="bedrock-runtime", region_name="eu-west-2")
 
 # Amazon Titan Text Embeddings V2
 bedrock_embeddings = BedrockEmbeddings(
@@ -39,7 +39,7 @@ def get_claude_llm():
     # ChatBedrock uses Bedrock Messages API (sends `messages`, not `prompt`).
     return ChatBedrock(
         model_id="eu.anthropic.claude-3-7-sonnet-20250219-v1:0",
-        region_name="eu-north-1",
+        region_name="eu-west-2",
         model_kwargs={
             "anthropic_version": "bedrock-2023-05-31",
             "max_tokens": 512,

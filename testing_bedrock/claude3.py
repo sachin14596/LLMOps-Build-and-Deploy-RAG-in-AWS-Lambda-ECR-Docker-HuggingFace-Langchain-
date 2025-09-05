@@ -2,7 +2,7 @@ import json
 import boto3
 
 # Region as per your ARN
-bedrock = boto3.client("bedrock-runtime", region_name="eu-north-1")
+bedrock = boto3.client("bedrock-runtime", region_name="eu-west-2")
 
 prompt = "You are a cricket expert. Just tell me when RCB will win the IPL?"
 
